@@ -1,0 +1,9 @@
+body: #F1F0ED
+
+text : #191919
+
+buttons : #F54460
+
+footer : #1A1A1A
+
+text footer : #F1F0ED
