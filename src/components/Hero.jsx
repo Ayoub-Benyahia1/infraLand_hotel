@@ -43,6 +43,7 @@ function Hero() {
               src={sunset}
               alt="sunset"
               className="w-[14dvw] lg:w-[5svw]"
+              loading="lazy"
             />
             <motion.span variants={item}>island</motion.span>
           </motion.div>
@@ -67,13 +68,24 @@ function Hero() {
         </motion.p>
       </div>
       <hr className="mt-16" />
-      <motion.div variants={container} initial="hidden" animate="visible" className="flex justify-between px-2 lg:px-6 items-center h-[4dvh] uppercase">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="flex justify-between px-2 lg:px-6 items-center h-[4dvh] uppercase"
+      >
         <GiStarShuriken variants={item} className="text-[#F54460]" />
-        <motion.span variants={item} className="text-xs tracking-wider lg:tracking-[0.3rem]">
+        <motion.span
+          variants={item}
+          className="text-xs tracking-wider lg:tracking-[0.3rem]"
+        >
           the sunny side of life
         </motion.span>
         <GiStarShuriken variants={item} className="text-[#F54460]" />
-        <motion.span variants={item} className="text-xs tracking-wider lg:tracking-[0.3rem]">
+        <motion.span
+          variants={item}
+          className="text-xs tracking-wider lg:tracking-[0.3rem]"
+        >
           the sunny side of life
         </motion.span>
         <GiStarShuriken variants={item} className="text-[#F54460]" />

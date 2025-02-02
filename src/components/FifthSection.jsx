@@ -106,6 +106,7 @@ function FifthSection() {
               src={secondeLandscape}
               alt="secondeLandscape"
               className="w-96 lg:w-[50%] lg:h-[100%] rounded-md"
+              loading="lazy"
             />
             <div className="lg:w-[50%] h-[100%] mt-2 lg:mt-0 flex flex-col justify-between gap-4">
               <h1 className="text-2xl lg:text-5xl">

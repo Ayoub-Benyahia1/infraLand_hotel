@@ -28,6 +28,7 @@ function SecondSection() {
             src={leafPattern}
             alt="leaf"
             className="absolute top-[-3dvh] md:top-[-6dvh] left-[-5dvw] w-[30dvw] md:w-[17dvw] scale-y-[-1]"
+            loading="lazy"
           />
           <motion.div
             style={{ scale, opacity }}
@@ -51,9 +52,13 @@ function SecondSection() {
             src={leaf}
             alt="leaf"
             className="absolute bottom-[-6dvh] lg:bottom-[-14dvh] right-[-6dvw] w-[30%] md:w-[17dvw] scale-x-[-1]"
+            loading="lazy"
           />
         </div>
-        <motion.div style={{ x: x3 }} className="flex items-center gap-3 ml-10 mt-[10%] md:mt-32">
+        <motion.div
+          style={{ x: x3 }}
+          className="flex items-center gap-3 ml-10 mt-[10%] md:mt-32"
+        >
           <GiStarShuriken className="text-[#F54460]" />
           <span className="uppercase text-xs md:text-base tracking-[0.3rem] md:tracking-[0.5rem]">
             infraland

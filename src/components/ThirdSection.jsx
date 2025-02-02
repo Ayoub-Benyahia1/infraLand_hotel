@@ -32,7 +32,7 @@ function ThirdSection() {
           style={{ scale }}
           className="w-[80%] lg:w-[85%] h-[90%] lg:h-[45%] bg-white m-auto rounded-md p-4 lg:p-8 flex flex-col justify-between"
         >
-          <img src={sunset} alt="sunset" className="w-[8dvw] lg:w-[3dvw]" />
+          <img src={sunset} alt="sunset" className="w-[8dvw] lg:w-[3dvw]" loading="lazy" />
           <h1 className="uppercase text-md tracking-[0.1rem] lg:tracking-[0.3rem]">
             sunset ocean suites
           </h1>

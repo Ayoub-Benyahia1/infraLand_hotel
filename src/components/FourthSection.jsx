@@ -16,13 +16,13 @@ function FourthSection() {
   const y1stCard = useTransform(scrollYProgress, [0.05, 0.3], [100, 0]);
   const xImage = useTransform(scrollYProgress, [0.05, 0.3], [100, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
-  const scaleBackground = useTransform(scrollYProgress, [0, 0.25], [0.4, 1])
-  const y2ndCard = useTransform(scrollYProgress, [0.25, 0.5], [200, 0])
-  const y3rdCard = useTransform(scrollYProgress, [0.25, 0.6], [200, 0])
-  const opacityCards = useTransform(scrollYProgress, [0.2, 0.55], [0, 1])
-  const xLastImage = useTransform(scrollYProgress, [0.3, 0.7], [-150, 0])
-  const yLastImage = useTransform(scrollYProgress, [0.3, 0.7], [150, 0])
-  const opacityImage = useTransform(scrollYProgress, [0.3, 0.65], [0, 1])
+  const scaleBackground = useTransform(scrollYProgress, [0, 0.25], [0.4, 1]);
+  const y2ndCard = useTransform(scrollYProgress, [0.25, 0.5], [200, 0]);
+  const y3rdCard = useTransform(scrollYProgress, [0.25, 0.6], [200, 0]);
+  const opacityCards = useTransform(scrollYProgress, [0.2, 0.55], [0, 1]);
+  const xLastImage = useTransform(scrollYProgress, [0.3, 0.7], [-150, 0]);
+  const yLastImage = useTransform(scrollYProgress, [0.3, 0.7], [150, 0]);
+  const opacityImage = useTransform(scrollYProgress, [0.3, 0.65], [0, 1]);
 
   return (
     <section
@@ -51,6 +51,7 @@ function FourthSection() {
             src={leafPattern}
             alt="leaf"
             className="absolute top-5 lg:top-[-35dvh] right-[-10dvw] w-[25dvw] scale-y-[-1] scale-x-[-1] z-20"
+            loading="lazy"
           />
           <motion.div
             style={{ y: y1stCard, opacity }}
@@ -73,7 +74,10 @@ function FourthSection() {
         className="h-[80dvh] bg-left-bottom bg-no-repeat lg:flex items-end justify-around relative"
         style={{ scale: scaleBackground, backgroundImage: `url(${landscape})` }}
       >
-        <motion.div style={{ y: y2ndCard, opacity: opacityCards }} className="w-[90dvw] h-[30dvh] md:w-[68dvw] lg:w-[25dvw] lg:h-[55dvh] border-2 bg-[#24394C] rounded-md p-4 lg:p-8 flex flex-col justify-between absolute bottom-56 left-5 md:top-48 md:left-36 lg:bottom-[-14dvh] lg:left-[15dvw]">
+        <motion.div
+          style={{ y: y2ndCard, opacity: opacityCards }}
+          className="w-[90dvw] h-[30dvh] md:w-[68dvw] lg:w-[25dvw] lg:h-[55dvh] border-2 bg-[#24394C] rounded-md p-4 lg:p-8 flex flex-col justify-between absolute bottom-56 left-5 md:top-48 md:left-36 lg:bottom-[-14dvh] lg:left-[15dvw]"
+        >
           <h1 className="text-3xl text-white md:text-6xl">
             Intimate <br /> <span className="text-[#F54460]">Weedings</span>
           </h1>
@@ -84,7 +88,10 @@ function FourthSection() {
             <GiStarShuriken className="text-[#F54460] w-14 lg:w-20" />
           </div>
         </motion.div>
-        <motion.div style={{ y: y3rdCard, opacity: opacityCards }} className="w-[90%] h-[30dvh] md:w-[68dvw] lg:w-[25dvw] lg:h-[55dvh] border-2 bg-white rounded-md  p-8 flex flex-col justify-between absolute  bottom-[-5dvh] right-5 md:right-[14dvw] lg:bottom-[-35dvh]">
+        <motion.div
+          style={{ y: y3rdCard, opacity: opacityCards }}
+          className="w-[90%] h-[30dvh] md:w-[68dvw] lg:w-[25dvw] lg:h-[55dvh] border-2 bg-white rounded-md  p-8 flex flex-col justify-between absolute  bottom-[-5dvh] right-5 md:right-[14dvw] lg:bottom-[-35dvh]"
+        >
           <h1 className="text-3xl md:text-6xl">
             Reef <br /> <span className="text-[#F54460]">Snorkeling</span>
           </h1>
@@ -98,10 +105,11 @@ function FourthSection() {
         </motion.div>
       </motion.div>
       <motion.img
-        style={{ x:xLastImage, y:yLastImage, opacity: opacityImage }}
+        style={{ x: xLastImage, y: yLastImage, opacity: opacityImage }}
         src={leaf}
         alt="leaf"
         className="absolute bottom-0 lg:bottom-[-10dvh] left-[-5dvw] w-[20dvw] lg:w-[20dvw] "
+        loading="lazy"
       />
     </section>
   );
